@@ -1,11 +1,9 @@
 const canvas = document.getElementById('game-of-life');
 const ctx = canvas.getContext('2d');
 
-const CELL = 14;
-const GAP = 1;
-const SIZE = CELL - GAP;
-const DENSITY = 0.18;
-const FRAME_SKIP = 4;
+const CELL = 6;
+const DENSITY = 0.12;
+const FRAME_SKIP = 10;
 
 let cols, rows, grid;
 let frame = 0;
@@ -60,11 +58,11 @@ function nextGen() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
     for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
             if (grid[i][j]) {
-                ctx.fillStyle = 'rgba(43, 147, 72, 0.2)';
-                ctx.fillRect(i * CELL + 1, j * CELL + 1, SIZE, SIZE);
+                ctx.fillRect(i * CELL + 1, j * CELL + 1, CELL - 2, CELL - 2);
             }
         }
     }

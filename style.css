@@ -15,13 +15,12 @@
 }
 
 :root {
-    --bg: #FAF9F6;
-    --text: #111;
-    --muted: #6B6B6B;
-    --accent: #2B9348;
-    --accent-subtle: rgba(43, 147, 72, 0.08);
+    --bg: #FFFFFF;
+    --text: #000000;
+    --muted: #7A7A7A;
+    --divider: #E8E8E8;
     --font: 'Aeonik Fono', 'Courier New', monospace;
-    --max-width: 640px;
+    --max-width: 680px;
 }
 
 *, *::before, *::after {
@@ -40,7 +39,7 @@ body {
     font-family: var(--font);
     color: var(--text);
     background: var(--bg);
-    line-height: 1.6;
+    line-height: 1.8;
     font-weight: 400;
 }
 
@@ -60,27 +59,27 @@ a {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 
-section:last-of-type {
-    padding-bottom: 3rem;
+section:first-of-type {
+    padding: 0;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
 }
 
 h2 {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: var(--muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 h3 {
@@ -91,8 +90,8 @@ h3 {
 
 p {
     font-size: 1rem;
-    color: #444;
-    line-height: 1.7;
+    color: var(--muted);
+    line-height: 1.8;
 }
 
 #hero {
@@ -120,7 +119,7 @@ p {
 }
 
 .tagline {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-size: 1.1rem;
     color: var(--muted);
 }
@@ -131,25 +130,13 @@ p {
 
 .brands-grid {
     display: grid;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
 
 .brand-card p {
-    margin-bottom: 1rem;
-}
-
-.status {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.status.active {
-    color: var(--accent);
-}
-
-.status.coming {
-    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
 }
 
 .contact-links {
@@ -164,23 +151,23 @@ p {
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
-    text-decoration-color: #ccc;
-    transition: text-decoration-color 0.2s;
+    text-decoration-color: var(--text);
     width: fit-content;
+    transition: opacity 0.2s;
 }
 
 .contact-links a:hover {
-    text-decoration-color: var(--accent);
+    opacity: 0.5;
 }
 
 .copyright {
-    font-size: 0.8rem;
-    color: #bbb;
+    font-size: 0.75rem;
+    color: var(--muted);
 }
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 2.25rem;
+        font-size: 2.75rem;
     }
 
     .tagline {
@@ -192,6 +179,7 @@ p {
     }
 
     .brands-grid {
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 }

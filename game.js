@@ -1,21 +1,29 @@
 const canvas = document.getElementById('game-of-life');
 const ctx = canvas.getContext('2d');
 
-const CELL = 6;
 const DENSITY = 0.12;
 const FRAME_SKIP = 10;
+const FONT_SIZE = 11;
+const LINE_HEIGHT = 1.4;
 
-let cols, rows, grid;
+let cols, rows, grid, charW, charH;
 let frame = 0;
 let running = false;
 let id = null;
+
+function initMetrics() {
+    ctx.font = `${FONT_SIZE}px 'Courier New', monospace`;
+    charW = ctx.measureText('0').width;
+    charH = FONT_SIZE * LINE_HEIGHT;
+}
 
 function resize() {
     const rect = document.getElementById('hero');
     canvas.width = rect.offsetWidth;
     canvas.height = rect.offsetHeight;
-    cols = Math.floor(canvas.width / CELL);
-    rows = Math.floor(canvas.height / CELL);
+    initMetrics();
+    cols = Math.floor(canvas.width / charW);
+    rows = Math.floor(canvas.height / charH);
     grid = createGrid();
 }
 
@@ -58,11 +66,18 @@ function nextGen() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
+    ctx.font = `${FONT_SIZE}px 'Courier New', monospace`;
+    ctx.textBaseline = 'top';
     for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
+            const x = i * charW;
+            const y = j * charH;
             if (grid[i][j]) {
-                ctx.fillRect(i * CELL + 1, j * CELL + 1, CELL - 2, CELL - 2);
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+                ctx.fillText('1', x, y);
+            } else {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillText('0', x, y);
             }
         }
     }

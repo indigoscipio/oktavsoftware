@@ -17,6 +17,7 @@
 :root {
     --bg: #FFFFFF;
     --text: #000000;
+    --accent: #312E81;
     --muted: #7A7A7A;
     --divider: #E8E8E8;
     --font: 'Aeonik Fono', 'Courier New', monospace;
@@ -36,7 +37,7 @@ html {
 }
 
 ::selection {
-    background: #000;
+    background: var(--accent);
     color: #fff;
 }
 
@@ -141,6 +142,7 @@ nav {
 
 .logo::before {
     content: '<os/>';
+    color: var(--accent);
     animation: os-cycle 5.4s steps(1) infinite;
 }
 
@@ -161,7 +163,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--text);
+    color: var(--accent);
 }
 
 .tagline {
@@ -226,11 +228,11 @@ nav {
 
 .contact-links a::before {
     content: '$ ';
-    color: var(--muted);
+    color: var(--accent);
 }
 
 .contact-links a:hover {
-    background: #000;
+    background: var(--accent);
     color: #fff;
 }
 

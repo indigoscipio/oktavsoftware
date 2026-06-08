@@ -15,9 +15,9 @@
 }
 
 :root {
-    --bg: #0A0A0A;
+    --bg: #080D2B;
     --text: #E8E8E8;
-    --accent: #6366F1;
+    --accent: #0F3BFE;
     --muted: #6B6B6B;
     --divider: #2A2A2A;
     --font: 'Aeonik Fono', 'Courier New', monospace;
@@ -45,7 +45,7 @@ body {
     font-family: var(--font);
     color: var(--text);
     background-color: var(--bg);
-    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(15, 59, 254, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
     line-height: 1.8;
     font-weight: 400;

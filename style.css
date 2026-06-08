@@ -15,11 +15,11 @@
 }
 
 :root {
-    --bg: #FFFFFF;
-    --text: #000000;
-    --accent: #312E81;
-    --muted: #7A7A7A;
-    --divider: #E8E8E8;
+    --bg: #0A0A0A;
+    --text: #E8E8E8;
+    --accent: #6366F1;
+    --muted: #6B6B6B;
+    --divider: #2A2A2A;
     --font: 'Aeonik Fono', 'Courier New', monospace;
     --max-width: 680px;
 }
@@ -45,7 +45,7 @@ body {
     font-family: var(--font);
     color: var(--text);
     background-color: var(--bg);
-    background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
     line-height: 1.8;
     font-weight: 400;
@@ -179,6 +179,7 @@ nav {
 
 #hero h1::after {
     content: '_';
+    color: var(--accent);
     animation: blink 1s step-end infinite;
 }
 

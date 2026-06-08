@@ -43,10 +43,6 @@ body {
     font-weight: 400;
 }
 
-canvas {
-    display: block;
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -95,22 +91,11 @@ p {
 }
 
 #hero {
-    position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
-}
-
-#game-of-life {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
 }
 
 .hero-content {

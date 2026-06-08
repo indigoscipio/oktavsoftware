@@ -214,11 +214,8 @@ nav {
     margin-bottom: 3rem;
 }
 
-.contact-links a:first-child {
-    font-size: 1.25rem;
-}
-
 .contact-links a {
+    font-size: 1rem;
     color: var(--text);
     text-decoration: none;
     width: fit-content;

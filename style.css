@@ -48,6 +48,11 @@ a {
     text-decoration: none;
 }
 
+a:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -60,6 +65,10 @@ section {
 
 section:first-of-type {
     padding: 0;
+}
+
+section + section {
+    border-top: 1px solid var(--divider);
 }
 
 h1 {
@@ -98,11 +107,6 @@ p {
     text-align: center;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
 .tagline {
     margin-top: 1.5rem;
     font-size: 1.1rem;
@@ -119,6 +123,14 @@ p {
     gap: 2rem;
 }
 
+.brand-card {
+    transition: opacity 0.2s;
+}
+
+.brand-card:hover {
+    opacity: 0.5;
+}
+
 .brand-card p {
     font-size: 0.9rem;
     margin-bottom: 0;
@@ -129,6 +141,10 @@ p {
     flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 3rem;
+}
+
+.contact-links a:first-child {
+    font-size: 1.25rem;
 }
 
 .contact-links a {

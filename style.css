@@ -236,10 +236,6 @@ nav {
     margin-bottom: 0;
 }
 
-.brand-card h3 a {
-    color: var(--accent);
-}
-
 .brand-card h3 a:hover {
     text-decoration: underline;
 }

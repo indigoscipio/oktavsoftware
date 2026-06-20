@@ -272,6 +272,13 @@ nav {
     color: var(--muted);
 }
 
+p a {
+    text-decoration: underline dotted;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--muted);
+}
+
 @media (max-width: 600px) {
     #hero {
         padding: 4rem 0 3rem;
@@ -301,14 +308,7 @@ nav {
         padding: 4rem 0;
     }
 
-p a {
-    text-decoration: underline dotted;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1px;
-    text-decoration-color: var(--muted);
-}
-
-.brands-grid {
+    .brands-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }

@@ -301,7 +301,14 @@ nav {
         padding: 4rem 0;
     }
 
-    .brands-grid {
+p a {
+    text-decoration: underline dotted;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--muted);
+}
+
+.brands-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
